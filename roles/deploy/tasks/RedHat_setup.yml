@@ -38,7 +38,7 @@
 - name: copy war file to backup folder
   copy:
     src: '{{ war_file_loc }}/{{ war_file }}'
-    dest: '/backup/AIS/{{ war_file }}_backup_`date +%F`'
+    dest: '/backup/AIS/{{ war_file }}_backup_{{ date }}'
     remote_src: yes
   when: stat_result.stat.exists == True
 
