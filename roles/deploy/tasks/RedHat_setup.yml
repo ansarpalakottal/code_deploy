@@ -10,7 +10,7 @@
 - name: unziping the file
   unarchive:
     src: '{{ dst }}'
-    dest: /tmp/sample.war
+    dest: /tmp/
     #extra_opts: ['--strip-components=1', '--show-stored-names']
     remote_src: yes
 
