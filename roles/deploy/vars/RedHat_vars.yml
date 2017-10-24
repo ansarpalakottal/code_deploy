@@ -3,7 +3,7 @@
 
 war_file: sample.war
 war_file_deploy: sample
-war_file_down_loc: 'https://github.com/jibinjose087/download-repo/raw/master/sample.zip'
+war_file_down_loc: 'https://raw.githubusercontent.com/jibinjose087/download-repo/master/sample.zip'
 war_file_loc: '/local/apps/AIS'
 date: "{{ lookup('pipe', 'date +%Y%m%d-%H:%M:%S') }}"
 dst: '/tmp/sample.zip'
