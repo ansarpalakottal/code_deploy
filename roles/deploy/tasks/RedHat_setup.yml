@@ -1,11 +1,18 @@
 ---
 # tasks file for common
 
-- name: download war file from GIT reporsitory
+- name: download zip file from GIT reporsitory
   get_url:
     url: '{{ war_file_down_loc }}'
-    dest: '/tmp/sample.war'
+    dest: '/tmp/sample.zip'
     mode: 0777
+
+- name: unziping the file
+  unarchive:
+    src: /tmp/sample.zip
+    dest: /tmp
+    extra_opts: ['--strip-components=1', '--show-stored-names']
+    remote_src: yes
 
 - name: stop the tomcat service
   service: name=tomcat state=stopped
