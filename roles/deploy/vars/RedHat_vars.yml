@@ -1,9 +1,20 @@
+#---
+# vars file for common
+
+#war_file: sample.war
+#war_file_deploy: sample
+#war_file_down_loc: 'https://raw.githubusercontent.com/jibinjose087/download-repo/master/sample.war'
+#war_file_loc: '/local/apps/AIS'
+#date: "{{ lookup('pipe', 'date +%Y%m%d-%H:%M:%S') }}"
+
+
 ---
 # vars file for common
 
-war_file: sample.war
+war_file: '{{ WAR_FILE }}'
 war_file_deploy: sample
-war_file_down_loc: 'https://github.com/ansarpalakottal/firstproject/raw/master/sample.zip'
+war_file_down_loc: '{{ REPO_URL }}'
+zip_file_name: '{{ ZIP_FILE }}'
 war_file_loc: '/local/apps/AIS'
-date: "{{ lookup('pipe', 'date +%Y%m%d-%H:%M:%S') }}"
-dst: '/tmp/sample.zip'
+date: "{{ lookup('pipe', 'date +%Y%m%d-%H:%M:%S') }}" 
+java_loc: '{{ JAVA }}'
